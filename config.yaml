@@ -1,0 +1,194 @@
+baseURL: "https://ridhitbhura.com"
+languageCode: "en-us"
+title: "Ridhit Bhura"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 2
+
+params:
+  title: "Ridhit Bhura"
+  description: "Text about my cool site"
+  favicon: null
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Ridhit Bhura"
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: true
+      disableContact: true
+
+  hero:
+    enable: true
+    intro: "Hi! My name is"
+    title: "Ridhit Bhura."
+    subtitle: "I build software."
+    content: "I am a software engineer with an interest in optimzing data intensive applications and ML. 
+    I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science, 
+    and I spend my spare time telling stories through maps. 
+    I am currently based out of San Francisco and open to work!"
+    image: "me.jpg"
+    bottomImage:
+      enable: false
+    button:
+      enable: true
+      name: "Resume"
+      url: "Resume.pdf"
+      download: false
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fa fa-envelope
+          url: mailto:rb749@cornell.edu
+        - icon: fab fa-github
+          url: https://github.com/ridhitbhura
+        - icon: fab fa-x-twitter
+          url: https://x.com/RidhitMaps
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/ridhit
+      customIcons: []
+
+  about:
+    enable: false
+    title: "About Me"
+    image: ""
+    content: |-
+      I am a software engineer with an interest in data intensive applications and ML. I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science, and I spend my spare time telling stories through maps. I am currently based out of San Francisco and open to work!
+
+  experience:
+    enable: true
+    title: "Experience"
+    items:
+      - job: "Software Engineering Intern"
+        company: "Millennium Management"
+        companyUrl: "https://www.mlp.com"
+        date: "Jun 2023 - Aug 2023"
+        location: "Miami, FL"
+
+      - job: "Software Engineering Intern"
+        company: "UniPantry"
+        companyUrl: "https://www.linkedin.com/company/unipantry/"
+        date: "Mar 2022 - Aug 2022"
+        location: "New York, NY"
+
+  education:
+    enable: true
+    title: "Education"
+    items:
+      - title: "Bachelors of Science - Computer Science"
+        school:
+          name: "Cornell University"
+          url: "https://cis.cornell.edu"
+        date: "2020 - 2023"
+        content: |-
+          Extracurricular Activities
+            - TA - [CS 4750/5750](https://www.cs.cornell.edu/courses/cs5750/2023fa/)
+            - Treasurer - [Cornell Tarana A Cappella](https://www.cornelltarana.net)
+            - Computing Systems Lead - [Cornell Hyperloop](https://www.cornellhyperloop.com)
+            - [Cornell Cricket Club](https://www.instagram.com/cornellcricket/?hl=en)
+            - [Cornell Badminton Club](https://cornellbadminton.com/index.html)
+
+      - title: "IB Diploma"
+        school:
+          name: "Dhirubhai Ambani International School"
+          url: "https://www.dais.edu.in"
+        date: "2018 - 2020"
+        content: |-
+          Extracurricular Activities
+            - FIRST Robotics Competition - [Team 7539](https://frc-events.firstinspires.org/2023/team/7539)
+
+  projects:
+    enable: true
+    title: "Projects"
+    items:
+      - title: Cornell Hyperloop
+        content: Autonomous pod control and embedded software for Cornell Hyperloop's pod
+        image: hyperloop.jpg
+        featured:
+          name: Competition
+          link: https://cornellsun.com/2023/08/29/project-teams-spend-the-summer-excelling-in-competitions-traveling-globally/
+        badges:
+          - C++
+          - Python
+          - Embedded Systems
+          - Sensors
+        links:
+          - icon: fab fa-github
+            url: https://github.com/cornellhyperloop/electrical
+          - icon: fa fa-link
+            url: https://cornellhyperloop.com
+      - title: Graph Based Semi-Supervised Learning
+        content: Optimising Graph Based Semi Supervised Learning on Limited Labelled Data
+        image: graph.jpg
+        badges:
+          - Python
+          - Semi-Supervised Learning
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ridhitbhura/Graph-Based-Semi-Supervised-Research
+      - title: Prison-Dash
+        content: Prison-themed multiplayer Monopoly game
+        image: prisondash.jpg
+        featured:
+          name: Demo
+          link: https://github.com/ridhitbhura/Prison-Dash#demo
+        badges:
+          - OCaml
+          - Game Engine
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ridhitbhura/Prison-Dash
+
+  footer:
+    enable: true
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
