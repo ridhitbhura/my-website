@@ -2,6 +2,7 @@ baseURL: "https://ridhitbhura.com"
 languageCode: "en-us"
 title: "Ridhit Bhura"
 theme: hugo-profile
+googleAnalytics: "G-0VK0YV1F5K"
 
 outputs:
   home:
@@ -26,6 +27,11 @@ Menus:
       name: Blog
       title: Blog posts
       url: /blogs
+      weight: 2
+    - identifier: gallery
+      name: Maps
+      title: Map Repository
+      url: /gallery
       weight: 2
 
 params:
