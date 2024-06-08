@@ -2,7 +2,7 @@ baseURL: "https://ridhitbhura.com"
 languageCode: "en-us"
 title: "Ridhit Bhura"
 theme: hugo-profile
-googleAnalytics: "G-0VK0YV1F5K"
+googleAnalytics: "GTM-MCF5N8PP"
 
 outputs:
   home:
