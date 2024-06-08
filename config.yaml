@@ -30,8 +30,7 @@ Menus:
 
 params:
   title: "Ridhit Bhura"
-  description: "Text about my cool site"
-  favicon: null
+  description: "नमस्ते"
   useBootstrapCDN: false
   mathjax: false
   animate: true
