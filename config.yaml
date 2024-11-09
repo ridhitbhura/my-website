@@ -148,6 +148,20 @@ params:
     enable: true
     title: "Projects"
     items:
+      - title: LinkedIn Connection Note AI Bot
+        content: Personalized LinkedIn connection notes using LLMs on a Chrome Extension
+        image: linkedin.png
+        featured:
+          name: Demo
+          link: https://www.loom.com/share/e7a2e5833319434f9c77c02a64d32245?sid=bb3c35fb-ec87-437f-91e2-2ebf328b205c
+        badges:
+          - Chrome Extension
+          - JavaScript
+          - HTML/CSS
+          - LLMs
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ridhitbhura/linkedin-connect-ai
       - title: Cornell Hyperloop
         content: Autonomous pod control and embedded software for Cornell Hyperloop's pod
         image: hyperloop.jpg
