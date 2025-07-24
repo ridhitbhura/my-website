@@ -69,11 +69,11 @@ params:
     enable: true
     intro: "Hi! My name is"
     title: "Ridhit Bhura."
-    subtitle: "I build software."
-    content: "I am a software engineer with an interest in optimizing data intensive applications and ML. 
-    I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science, 
-    and I spend my spare time telling stories through maps. 
-    I am currently based out of San Francisco and open to work!"
+    subtitle: ""
+    content: |
+      I am a software engineer working on Applied AI in San Francisco.
+      I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science.
+      I spend my spare time telling stories through maps.
     image: "me.jpg"
     bottomImage:
       enable: false
@@ -106,6 +106,12 @@ params:
     enable: true
     title: "Experience"
     items:
+      - job: "Software Engineer II"
+        company: "GEICO"
+        companyUrl: "https://www.geico.com/"
+        date: "Nov 2024 - Present"
+        location: "Remote - San Francisco, CA"
+
       - job: "Software Engineering Intern"
         company: "Millennium Management"
         companyUrl: "https://www.mlp.com"
