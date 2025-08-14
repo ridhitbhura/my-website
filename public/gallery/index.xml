@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Map Repository on Ridhit Bhura</title>
-    <link>https://ridhitbhura.com/gallery/</link>
-    <description>Recent content in Map Repository on Ridhit Bhura</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 08 Jun 2024 18:35:46 +0530</lastBuildDate><atom:link href="https://ridhitbhura.com/gallery/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Map Repository on Ridhit Bhura</title><link>https://ridhitbhura.github.io/my-website/gallery/</link><description>Recent content in Map Repository on Ridhit Bhura</description><generator>Hugo</generator><language>en-us</language><lastBuildDate/><atom:link href="https://ridhitbhura.github.io/my-website/gallery/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
