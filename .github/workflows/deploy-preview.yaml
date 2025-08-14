@@ -9,7 +9,7 @@ on:
 
 # Sets permissions for deployment
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
   pull-requests: write
