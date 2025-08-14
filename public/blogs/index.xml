@@ -1,20 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blogs on Ridhit Bhura</title>
-    <link>https://ridhitbhura.com/blogs/</link>
-    <description>Recent content in Blogs on Ridhit Bhura</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 31 Jul 2021 22:53:58 +0530</lastBuildDate><atom:link href="https://ridhitbhura.com/blogs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How India (would have) voted?</title>
-      <link>https://ridhitbhura.com/blogs/india-voting-blog/</link>
-      <pubDate>Sat, 31 Jul 2021 22:53:58 +0530</pubDate>
-      
-      <guid>https://ridhitbhura.com/blogs/india-voting-blog/</guid>
-      <description>How India (would have) voted? India, a diverse subcontinent of nearly 1.5 billion people is the largest democracy in the world and recently re-elected its Prime Minister, Narendra Modi, in 2019 in a landslide. However, it has always been a tale as to what decides one&#39;s vote. Is it how much you earn, or how much you learn? Is it where you were born or those accolades past which you&#39;ve torn?</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on Ridhit Bhura</title><link>https://ridhitbhura.com/blogs/</link><description>Recent content in Blogs on Ridhit Bhura</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 31 Jul 2021 22:53:58 +0530</lastBuildDate><atom:link href="https://ridhitbhura.com/blogs/index.xml" rel="self" type="application/rss+xml"/><item><title>How India (would have) voted?</title><link>https://ridhitbhura.com/blogs/india-voting-blog/</link><pubDate>Sat, 31 Jul 2021 22:53:58 +0530</pubDate><guid>https://ridhitbhura.com/blogs/india-voting-blog/</guid><description>&lt;h1 id="how-india-would-have-voted">How India (would have) voted?&lt;/h1>
+&lt;p>&lt;a href="https://github.com/ridhitbhura/Election_Modelling_India">&lt;img src="https://badgen.net/badge/icon/GitHub?icon=github&amp;amp;label" alt="Repo">&lt;/a>&lt;/p>
+&lt;div style="text-align: justify">
+India, a diverse subcontinent of nearly 1.5 billion people is the largest democracy in the world and recently re-elected its Prime Minister, Narendra Modi, in 2019 in a landslide. However, it has always been a tale as to what decides one's vote. Is it how much you earn, or how much you learn? Is it where you were born or those accolades past which you've torn?
+&lt;p>In this exploratory exercise, the biggest challenge was to find a common level at which demographic data (through the census) and granular election data for India is available.&lt;/p></description></item></channel></rss>
