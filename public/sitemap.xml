@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://ridhitbhura.github.io/my-website/gallery/</loc><lastmod>2024-06-08T18:35:46+05:30</lastmod></url><url><loc>https://ridhitbhura.github.io/my-website/</loc><lastmod>2024-06-08T18:35:46+05:30</lastmod></url><url><loc>https://ridhitbhura.github.io/my-website/blogs/</loc><lastmod>2021-07-31T22:53:58+05:30</lastmod></url><url><loc>https://ridhitbhura.github.io/my-website/tags/election/</loc><lastmod>2021-07-31T22:53:58+05:30</lastmod></url><url><loc>https://ridhitbhura.github.io/my-website/blogs/india-voting-blog/</loc><lastmod>2021-07-31T22:53:58+05:30</lastmod></url><url><loc>https://ridhitbhura.github.io/my-website/tags/india/</loc><lastmod>2021-07-31T22:53:58+05:30</lastmod></url><url><loc>https://ridhitbhura.github.io/my-website/tags/</loc><lastmod>2021-07-31T22:53:58+05:30</lastmod></url><url><loc>https://ridhitbhura.github.io/my-website/categories/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/my-website/gallery/</loc>
+    <lastmod>2024-06-08T18:35:46+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-website/</loc>
+    <lastmod>2024-06-08T18:35:46+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-website/blogs/</loc>
+    <lastmod>2021-07-31T22:53:58+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-website/tags/election/</loc>
+    <lastmod>2021-07-31T22:53:58+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-website/blogs/india-voting-blog/</loc>
+    <lastmod>2021-07-31T22:53:58+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-website/tags/india/</loc>
+    <lastmod>2021-07-31T22:53:58+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-website/tags/</loc>
+    <lastmod>2021-07-31T22:53:58+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-website/categories/</loc>
+  </url>
+</urlset>
