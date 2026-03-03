@@ -39,7 +39,7 @@ Menus:
 
 params:
   title: "Ridhit Bhura"
-  description: "Ridhit Bhura - Software Engineer & Cartographer. Building Applied AI in New York City. Cornell CS grad. Telling stories through maps."
+  description: "Ridhit Bhura - Software Engineer. Building Applied AI in New York City. Cornell CS grad. Telling stories through maps."
   favicon: "/favicon.png"
   useBootstrapCDN: false
   customCSS: true
