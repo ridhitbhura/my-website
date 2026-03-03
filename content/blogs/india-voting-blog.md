@@ -36,7 +36,7 @@ Polarity in politics can skew data to a great degree. A country like the United 
 
 ## Maps
 
-Here are some maps that will help visualise what I've been talking about.
+Here are some visualizations that help illustrate what I've been talking about.
 
 | [![Jp80UbV.md.png](https://iili.io/Jp80UbV.md.png)](https://freeimage.host/i/Jp80UbV) |
 | :-----------------------------------------------------------------------------------: |
@@ -47,7 +47,7 @@ Here are some maps that will help visualise what I've been talking about.
 |            Model Predicted Raw Votes for United Progressive Alliance (UPA)            |
 
 <div style="text-align: justify">
-These two maps above show the kNN model that predicts the votes based on demographic patterns. Below are maps of how the country would have voted keeping only a two-alliance calculation in place. A few notes:
+These two figures above show the kNN model that predicts the votes based on demographic patterns. Below are projections of how the country would have voted keeping only a two-alliance calculation in place. A few notes:
 
 - In the state of Uttar Pradesh and eastern districts along West Bengal, there were strong major third party performances and the UPA was non existent, so the results may seem lopsided.
 - In the western portions, the legend may undertone the margin but those regions are highly bipolar and thus a 20-25% victory margin is deceivingly low due to the normalisation of the legend.
@@ -56,30 +56,33 @@ These two maps above show the kNN model that predicts the votes based on demogra
 
 | [![Jp80rzB.md.png](https://iili.io/Jp80rzB.md.png)](https://freeimage.host/i/Jp80rzB) |
 | :-----------------------------------------------------------------------------------: |
+
 | Higher Red -> Higher NDA
 Higher Blue -> Higher UPA |
 
 | [![Jp80SOQ.md.png](https://iili.io/Jp80SOQ.md.png)](https://freeimage.host/i/Jp80SOQ) |
 | :-----------------------------------------------------------------------------------: |
+
 |Higher Red -> Higher NDA
 Higher Blue -> Higher UPA|
 
 ## Model Analysis
 
 <div style="text-align: justify">
-This map below is extremely rich in information as to how each alliance performs relatively to the districts' demographics and clear spatial trends start to emerge.
+This figure below is extremely rich in information as to how each alliance performs relatively to the districts' demographics and clear spatial trends start to emerge.
 </div>
 
 | [![Jp804WP.md.png](https://iili.io/Jp804WP.md.png)](https://freeimage.host/i/Jp804WP) |
 | :-----------------------------------------------------------------------------------: |
+
 | Red -> NDA Over-performance/UPA Underperformance
 Blue -> UPA Over-performance/NDA Underperformance |
 
 <div style="text-align: justify">
 
-The above map shows the relative comparison between the actual 2019 election results and prediction ML model. The results are quite interesting -
+The above figure shows the relative comparison between the actual 2019 election results and prediction ML model. The results are quite interesting -
 
-The map above shows how the districts would vote purely on demographics and alliances' relative performances. The areas that are redder are those where the NDA performed better in the 2019 election than they do in the model. Hence they overperform the demographics. The areas that are bluer are where the UPA performed better/NDA performed worse than they do in the model. Thus UPA overperforms while NDA underperforms the demograhics of the district.
+The figure above shows how the districts would vote purely on demographics and alliances' relative performances. The areas that are redder are those where the NDA performed better in the 2019 election than they do in the model. Hence they overperform the demographics. The areas that are bluer are where the UPA performed better/NDA performed worse than they do in the model. Thus UPA overperforms while NDA underperforms the demograhics of the district.
 
 - Blue areas are those that the NDA alliance underperformed in the model as compared to the actual election. Thus, this translates to stronger performance given the demographics of the area for the NDA. Essentially the NDA does better with voters in blue shaded areas than they do nationally on aggregate.
 - Red areas are those that the NDA alliance over-performed in the model as compared to the actual election. Thus, this translates to weaker performance in the 2019 election given the demographics of the area for the NDA. Essentially the NDA does worse with voters in red shaded areas than they do nationally on aggregate.

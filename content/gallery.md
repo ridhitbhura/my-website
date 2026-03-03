@@ -1,9 +1,9 @@
 ---
 
-title: "Map Repository"
+title: "Map Gallery"
 date: 2024-06-08T18:35:46+05:30
 draft: false
-description: "Maps of the world :earth_asia:"
+description: "A gallery of map visualizations."
 layout: "gallery"
 galleryImages:
 
