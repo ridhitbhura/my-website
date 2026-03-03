@@ -32,14 +32,14 @@ Menus:
       url: /blogs
       weight: 2
     - identifier: gallery
-      name: Map Gallery
-      title: Map Gallery
+      name: Maps
+      title: Map Repository
       url: /gallery
       weight: 2
 
 params:
   title: "Ridhit Bhura"
-  description: "Ridhit Bhura - Software Engineer. Building Applied AI in New York City. Cornell CS grad. I build data visualizations and maps."
+  description: "Ridhit Bhura - Software Engineer & Cartographer. Building Applied AI in New York City. Cornell CS grad. Telling stories through maps."
   favicon: "/favicon.png"
   useBootstrapCDN: false
   customCSS: true
@@ -93,7 +93,7 @@ params:
     content: |
       I am a software engineer working on Applied AI in New York City.
       I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science.
-      When I'm not writing code, I build data visualizations and maps — exploring how data, geography, and elections intersect.
+      When I'm not writing code, I'm telling stories through [maps](/gallery) -- exploring how data, geography, and elections intersect across the world.
     image: "me.jpg"
     bottomImage:
       enable: false
@@ -122,7 +122,7 @@ params:
     content: |-
       I am a software engineer working on Applied AI with an interest in data-intensive applications and machine learning. I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science.
 
-      Outside of work, I enjoy building side projects and exploring data-intensive problems. I am currently based out of New York City.
+      Outside of work, I tell stories through maps -- combining data, geography, and electoral analysis to visualize how the world votes and lives. I am currently based out of New York City.
 
   experience:
     enable: true
