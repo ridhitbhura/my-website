@@ -1,0 +1,123 @@
+/* =============================================
+   Warm & Earthy Custom Styles
+   Overrides for hugo-profile theme
+   ============================================= */
+
+/* --- Scrollbar warmth --- */
+body::-webkit-scrollbar-thumb {
+    background: #c0692d80;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: #c0692d;
+}
+
+/* --- Text selection --- */
+::selection {
+    background-color: #c0692d40;
+    color: var(--text-color);
+}
+
+/* --- Hero section polish --- */
+#hero .image img {
+    border-color: #c0692d40;
+    box-shadow: 0px 8px 40px rgba(192, 105, 45, 0.12);
+}
+
+#hero .image.animate img:hover {
+    box-shadow: 0 0 20px rgba(192, 105, 45, 0.2);
+}
+
+#hero a.btn.social-icon:hover {
+    background-color: #c0692d10 !important;
+    opacity: 0.9;
+}
+
+/* --- Card warm shadows --- */
+#experience .experience-container,
+#education .card,
+#projects .card {
+    box-shadow: 0px 6px 30px rgba(45, 36, 24, 0.08);
+}
+
+#projects .card:hover {
+    box-shadow: 0 8px 30px rgba(192, 105, 45, 0.15);
+}
+
+#education .card:hover {
+    box-shadow: 0 4px 20px rgba(192, 105, 45, 0.12);
+}
+
+/* --- Badge styling --- */
+#projects .badge {
+    border: 1px solid #c0692d30;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* --- Navbar brand warmth --- */
+header .navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+/* --- Sticky header warm shadow --- */
+.showHeaderOnTop {
+    box-shadow: 0px 4px 30px rgba(45, 36, 24, 0.1) !important;
+}
+
+/* --- Footer warm divider --- */
+footer {
+    border-top: 1px solid #c0692d20;
+    margin-top: 2rem;
+}
+
+/* --- Blog blockquote warm accent --- */
+#single .page-content blockquote {
+    border-left-color: #c0692d !important;
+    background-color: #c0692d08 !important;
+}
+
+/* --- Smooth transitions --- */
+a, .btn, .card, .nav-link {
+    transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* --- Dark mode adjustments --- */
+body.dark ::selection {
+    background-color: #e8a44a40;
+}
+
+body.dark .showHeaderOnTop {
+    box-shadow: 0px 4px 30px rgba(26, 20, 16, 0.4) !important;
+}
+
+body.dark footer {
+    border-top-color: #e8a44a20;
+}
+
+body.dark #projects .badge {
+    border-color: #e8a44a30;
+}
+
+body.dark #projects .card:hover {
+    box-shadow: 0 8px 30px rgba(232, 164, 74, 0.1);
+}
+
+body.dark #education .card:hover {
+    box-shadow: 0 4px 20px rgba(232, 164, 74, 0.08);
+}
+
+body.dark #experience .experience-container,
+body.dark #education .card,
+body.dark #projects .card {
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.dark #hero .image img {
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.3);
+    border-color: #e8a44a30;
+}
+
+body.dark #hero .image.animate img:hover {
+    box-shadow: 0 0 20px rgba(232, 164, 74, 0.15);
+}
