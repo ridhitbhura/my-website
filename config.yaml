@@ -39,13 +39,30 @@ Menus:
 
 params:
   title: "Ridhit Bhura"
-  description: "नमस्ते"
+  description: "Ridhit Bhura - Software Engineer. Building Applied AI in New York City. Cornell CS grad. Telling stories through maps."
+  favicon: "/favicon.png"
   useBootstrapCDN: false
+  customCSS: true
   mathjax: false
   animate: true
   theme:
     # disableThemeToggle: true
     # defaultTheme: "light" # dark
+
+  color:
+    textColor: "#2d2418"
+    secondaryTextColor: "#7a6e5d"
+    backgroundColor: "#faf5ee"
+    secondaryBackgroundColor: "#d4883a1a"
+    primaryColor: "#c0692d"
+    secondaryColor: "#f2ead8"
+    darkmode:
+      textColor: "#ede5d8"
+      secondaryTextColor: "#a89882"
+      backgroundColor: "#1a1410"
+      secondaryBackgroundColor: "#c0692d1a"
+      primaryColor: "#e8a44a"
+      secondaryColor: "#261e15"
 
   font:
     fontSize: 1rem
@@ -74,9 +91,9 @@ params:
     title: "Ridhit Bhura."
     subtitle: ""
     content: |
-      I am a software engineer working on Applied AI in San Francisco.
+      I am a software engineer working on Applied AI in New York City.
       I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science.
-      I spend my spare time telling stories through maps.
+      When I'm not writing code, I'm telling stories through [maps](/gallery) -- exploring how data, geography, and elections intersect across the world.
     image: "me.jpg"
     bottomImage:
       enable: false
@@ -101,9 +118,11 @@ params:
   about:
     enable: false
     title: "About Me"
-    image: ""
+    image: "me.jpg"
     content: |-
-      I am a software engineer with an interest in data intensive applications and ML. I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science, and I spend my spare time telling stories through maps. I am currently based out of San Francisco and open to work!
+      I am a software engineer working on Applied AI with an interest in data-intensive applications and machine learning. I graduated from [Cornell University](https://cornell.edu/) with a B.S. in Computer Science.
+
+      Outside of work, I tell stories through maps -- combining data, geography, and electoral analysis to visualize how the world votes and lives. I am currently based out of New York City.
 
   experience:
     enable: true
@@ -113,7 +132,7 @@ params:
         company: "GEICO"
         companyUrl: "https://www.geico.com/"
         date: "Nov 2024 - Present"
-        location: "Remote - San Francisco, CA"
+        location: "Remote - New York, NY"
 
       - job: "Software Engineering Intern"
         company: "Millennium Management"
@@ -158,7 +177,7 @@ params:
     title: "Projects"
     items:
       - title: LinkedIn Connection Note AI Bot
-        content: Personalized LinkedIn connection notes using LLMs on a Chrome Extension
+        content: Chrome extension that drafts personalized LinkedIn connection notes by analyzing profile context with LLMs -- turning cold outreach into warm introductions.
         image: linkedin.png
         featured:
           name: Demo
@@ -172,7 +191,7 @@ params:
           - icon: fab fa-github
             url: https://github.com/ridhitbhura/linkedin-connect-ai
       - title: Cornell Hyperloop
-        content: Autonomous pod control and embedded software for Cornell Hyperloop's pod
+        content: Autonomous pod control and embedded software for Cornell Hyperloop -- real-time sensor processing, safety interlocks, and competition-ready firmware.
         image: hyperloop.jpg
         featured:
           name: Competition
@@ -188,7 +207,7 @@ params:
           - icon: fa fa-link
             url: https://cornellhyperloop.com
       - title: Graph Based Semi-Supervised Learning
-        content: Optimising Graph Based Semi Supervised Learning on Limited Labelled Data
+        content: Research on optimizing graph-based semi-supervised learning when labeled data is scarce -- exploring how graph structure can compensate for missing labels.
         image: graph.jpg
         badges:
           - Python
@@ -197,7 +216,7 @@ params:
           - icon: fab fa-github
             url: https://github.com/ridhitbhura/Graph-Based-Semi-Supervised-Research
       - title: Prison-Dash
-        content: Prison-themed multiplayer Monopoly game
+        content: Prison-themed multiplayer Monopoly built from scratch in OCaml -- custom game engine with turn-based logic, property management, and player interactions.
         image: prisondash.jpg
         featured:
           name: Demo
@@ -211,6 +230,16 @@ params:
 
   footer:
     enable: true
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: "Recent Posts"
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/ridhitbhura
+      linkedin: https://linkedin.com/in/ridhit
+      twitter: https://x.com/RidhitMaps
   listPages:
     disableFeaturedImage: false
 

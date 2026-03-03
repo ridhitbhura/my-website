@@ -7,6 +7,7 @@ tags:
   - Election
   - India
 description: "ML model prediction on how India would have voted in 2019"
+image: "https://iili.io/Jp80UbV.md.png"
 toc:
 ---
 
