@@ -1,17 +1,17 @@
 /* =============================================
-   Protocol homepage spike
+   Command-first homepage
    Overrides for hugo-profile theme
    ============================================= */
 
 :root {
-    --protocol-bg: #f5f0e8;
-    --protocol-ink: #151412;
-    --protocol-muted: #68635b;
-    --protocol-line: rgba(21, 20, 18, 0.14);
-    --protocol-panel: rgba(255, 252, 245, 0.78);
-    --protocol-green: #0f8f64;
-    --protocol-blue: #2156f3;
-    --protocol-coral: #d45b43;
+    --protocol-bg: #f7f5ef;
+    --protocol-ink: #181b22;
+    --protocol-muted: #61666f;
+    --protocol-line: rgba(24, 27, 34, 0.14);
+    --protocol-panel: rgba(255, 255, 255, 0.78);
+    --protocol-green: #12946a;
+    --protocol-blue: #245be8;
+    --protocol-coral: #c94f3d;
 }
 
 body {
@@ -24,11 +24,11 @@ body {
 }
 
 body.dark {
-    --protocol-bg: #111315;
-    --protocol-ink: #ece7dc;
-    --protocol-muted: #9e988d;
-    --protocol-line: rgba(236, 231, 220, 0.17);
-    --protocol-panel: rgba(17, 19, 21, 0.78);
+    --protocol-bg: #111418;
+    --protocol-ink: #edf2f5;
+    --protocol-muted: #a1a8b0;
+    --protocol-line: rgba(237, 242, 245, 0.17);
+    --protocol-panel: rgba(17, 20, 24, 0.78);
     --protocol-green: #60d89f;
     --protocol-blue: #7a9cff;
     --protocol-coral: #ff866d;
@@ -78,16 +78,16 @@ li > .dropdown-toggle:focus {
 }
 
 #hero.agent-home {
-    min-height: calc(100svh - 78px);
+    min-height: clamp(560px, calc(100svh - 132px), 760px);
     display: grid;
     place-items: center;
     width: 100vw;
     margin-left: calc(50% - 50vw);
     padding: clamp(1.25rem, 4vw, 4rem);
     background:
-        linear-gradient(rgba(244, 239, 231, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(244, 239, 231, 0.035) 1px, transparent 1px),
-        #0d0f12;
+        linear-gradient(rgba(237, 242, 245, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(237, 242, 245, 0.035) 1px, transparent 1px),
+        #0c1117;
     background-size: 42px 42px;
     color: #f4efe7;
     line-height: 1.4;
@@ -159,7 +159,7 @@ li > .dropdown-toggle:focus {
 .agent-home__status {
     position: relative;
     padding-left: 0.82rem;
-    color: var(--protocol-green);
+    color: #47d7a5;
 }
 
 .agent-home__status::before {
@@ -192,7 +192,7 @@ li > .dropdown-toggle:focus {
 #hero.agent-home h1 {
     margin: 0;
     font-family: "Roboto", "Alata", sans-serif;
-    font-size: clamp(0.88rem, 1.4vw, 1.08rem);
+    font-size: clamp(0.96rem, 1.45vw, 1.14rem);
     font-weight: 800;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -232,6 +232,9 @@ li > .dropdown-toggle:focus {
 
 .agent-home__toggle input {
     position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
     opacity: 0;
     pointer-events: none;
 }
@@ -267,7 +270,7 @@ li > .dropdown-toggle:focus {
 .agent-terminal {
     width: min(100%, 860px);
     border: 1px solid rgba(244, 239, 231, 0.16);
-    background: rgba(6, 8, 10, 0.92);
+    background: rgba(5, 9, 13, 0.94);
     color: #ece7dc;
     text-align: left;
     box-shadow: 0 28px 90px rgba(0, 0, 0, 0.38);
@@ -330,7 +333,7 @@ li > .dropdown-toggle:focus {
 .agent-terminal__output a {
     display: inline-block;
     margin-right: 1rem;
-    color: #8fb1ff !important;
+    color: #94b6ff !important;
     text-decoration: none;
 }
 
@@ -349,8 +352,8 @@ li > .dropdown-toggle:focus {
     }
 
     #hero.agent-home {
-        min-height: calc(100svh - 66px);
-        padding: 0.85rem 0;
+        min-height: auto;
+        padding: 0.85rem 0 1.35rem;
     }
 
     .agent-home__frame {
