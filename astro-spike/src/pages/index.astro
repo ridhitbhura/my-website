@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TerminalHero from "../components/TerminalHero.astro";
+import { profile, projects } from "../data/site";
+---
+
+<BaseLayout>
+  <TerminalHero />
+
+  <section class="section-grid">
+    <article>
+      <p class="eyebrow">Current focus</p>
+      <h2>Applied AI with a cartographer's eye.</h2>
+      <p>
+        Ridhit builds practical AI systems and data-heavy products, with a side
+        habit of turning elections and geography into readable maps.
+      </p>
+      <div class="inline-links">
+        <a href={profile.github}>GitHub</a>
+        <a href={profile.linkedin}>LinkedIn</a>
+        <a href={profile.x}>RidhitMaps</a>
+        <a href={profile.email}>Email</a>
+      </div>
+    </article>
+    <article>
+      <p class="eyebrow">Education</p>
+      <h2>Cornell CS, now building in New York City.</h2>
+      <p>
+        The Hugo site already had clean content. This slice checks whether
+        Astro makes the same material easier to structure, render, and expose to
+        both people and AI agents.
+      </p>
+    </article>
+  </section>
+
+  <section class="project-section" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <p class="eyebrow">Selected work</p>
+      <h2 id="projects-title">Projects</h2>
+    </div>
+    <div class="project-grid">
+      {projects.map((project) => (
+        <a class="project-card" href={project.href}>
+          <img src={project.image} alt="" loading="lazy" />
+          <div>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div class="tag-row">
+              {project.tags.map((tag) => <span>{tag}</span>)}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,1 +1,6 @@
 .claude
+.qa-dist/
+node_modules/
+.astro/
+dist/
+screenshots/

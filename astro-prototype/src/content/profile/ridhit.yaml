@@ -1,0 +1,60 @@
+name: Ridhit Bhura
+title: Software Engineer
+location: New York City
+intro: I am a software engineer working on Applied AI in New York City.
+bio:
+  - I graduated from Cornell University with a B.S. in Computer Science.
+  - When I am not writing code, I tell stories through maps, exploring how data, geography, and elections intersect across the world.
+avatar:
+  src: /me.jpg
+  alt: Ridhit Bhura
+socials:
+  - label: Email
+    href: mailto:rb749@cornell.edu
+    icon: mail
+    kind: email
+  - label: GitHub
+    href: https://github.com/ridhitbhura
+    icon: github
+    kind: social
+  - label: X
+    href: https://x.com/RidhitMaps
+    icon: x
+    kind: social
+  - label: LinkedIn
+    href: https://linkedin.com/in/ridhit
+    icon: linkedin
+    kind: social
+experience:
+  - role: Software Engineer II
+    organization: GEICO
+    organizationUrl: https://www.geico.com/
+    date: Nov 2024 - Present
+    location: Remote - New York, NY
+  - role: Software Engineering Intern
+    organization: Millennium Management
+    organizationUrl: https://www.mlp.com
+    date: Jun 2023 - Aug 2023
+    location: Miami, FL
+  - role: Software Engineering Intern
+    organization: UniPantry
+    organizationUrl: https://www.linkedin.com/company/unipantry/
+    date: Mar 2022 - Aug 2022
+    location: New York, NY
+education:
+  - credential: Bachelors of Science - Computer Science
+    school: Cornell University
+    schoolUrl: https://cis.cornell.edu
+    date: 2020 - 2023
+    notes:
+      - TA - CS 4750/5750
+      - Treasurer - Cornell Tarana A Cappella
+      - Computing Systems Lead - Cornell Hyperloop
+      - Cornell Cricket Club
+      - Cornell Badminton Club
+  - credential: IB Diploma
+    school: Dhirubhai Ambani International School
+    schoolUrl: https://www.dais.edu.in
+    date: 2018 - 2020
+    notes:
+      - FIRST Robotics Competition - Team 7539

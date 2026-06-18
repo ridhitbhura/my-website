@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { galleryImages } from "../data/site";
+---
+
+<BaseLayout title="Map Repository" description="Maps of the world by Ridhit Bhura.">
+  <section class="page-intro">
+    <p class="eyebrow">Map repository</p>
+    <h1>Maps of the world</h1>
+    <p>
+      A compact Astro rendering of the existing Hugo gallery, keeping the visual
+      grid static and image-first.
+    </p>
+  </section>
+
+  <section class="gallery-grid" aria-label="Map gallery">
+    {galleryImages.map((image) => (
+      <figure class="map-card">
+        <img src={image.src} alt={image.alt} loading="lazy" />
+      </figure>
+    ))}
+  </section>
+</BaseLayout>

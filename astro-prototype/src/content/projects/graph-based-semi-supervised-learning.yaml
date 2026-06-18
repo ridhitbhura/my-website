@@ -1,0 +1,14 @@
+title: Graph Based Semi-Supervised Learning
+summary: Research on optimizing graph-based semi-supervised learning when labeled data is scarce, exploring how graph structure can compensate for missing labels.
+image:
+  src: /graph.jpg
+  alt: Graph based semi-supervised learning project preview
+tags:
+  - Python
+  - Semi-Supervised Learning
+links:
+  - label: GitHub
+    href: https://github.com/ridhitbhura/Graph-Based-Semi-Supervised-Research
+    icon: github
+    kind: github
+order: 3

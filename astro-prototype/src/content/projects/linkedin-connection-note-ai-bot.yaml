@@ -1,0 +1,20 @@
+title: LinkedIn Connection Note AI Bot
+summary: Chrome extension that drafts personalized LinkedIn connection notes by analyzing profile context with LLMs, turning cold outreach into warm introductions.
+image:
+  src: /linkedin.png
+  alt: LinkedIn Connection Note AI Bot project preview
+featured:
+  label: Demo
+  href: https://www.loom.com/share/e7a2e5833319434f9c77c02a64d32245?sid=bb3c35fb-ec87-437f-91e2-2ebf328b205c
+  kind: demo
+tags:
+  - Chrome Extension
+  - JavaScript
+  - HTML/CSS
+  - LLMs
+links:
+  - label: GitHub
+    href: https://github.com/ridhitbhura/linkedin-connect-ai
+    icon: github
+    kind: github
+order: 1

@@ -1,0 +1,69 @@
+---
+import { command, profile } from "../data/site";
+---
+
+<section class="hero-shell" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">Astro migration spike</p>
+    <h1 id="hero-title">Ridhit Bhura</h1>
+    <p class="lede">{profile.role}. {profile.summary}</p>
+    <div class="mode-toggle" aria-label="Homepage mode">
+      <button class="is-active" type="button" data-mode-button="human">Human</button>
+      <button type="button" data-mode-button="agent">Agent</button>
+    </div>
+  </div>
+
+  <div class="terminal-panel" aria-label="Agent command preview">
+    <div class="terminal-top">
+      <span></span>
+      <span></span>
+      <span></span>
+      <strong>ridhit.sh</strong>
+    </div>
+    <div class="terminal-body">
+      <p><span class="prompt">{command.prompt}</span> <span class="command">$ {command.input}</span></p>
+      {command.output.map((line) => <p class="output-line">{line}</p>)}
+    </div>
+  </div>
+</section>
+
+<section class="mode-panels" aria-live="polite">
+  <div class="mode-panel is-visible" data-mode-panel="human">
+    <h2>For humans</h2>
+    <p>
+      Start with the maps, the India voting write-up, or the project notes.
+      The site should still feel like a personal portfolio first: warm, quick,
+      and scannable.
+    </p>
+    <div class="action-row">
+      <a class="button" href="/gallery">View maps</a>
+      <a class="button button-secondary" href="/blogs/india-voting-blog">Read writing</a>
+    </div>
+  </div>
+  <div class="mode-panel" data-mode-panel="agent">
+    <h2>For agents</h2>
+    <p>
+      Begin at <code>/agent.txt</code>, use <code>/llms.txt</code> for routing,
+      and prefer canonical links when summarizing Ridhit's work.
+    </p>
+    <div class="action-row">
+      <a class="button" href="/agent.txt">Open agent.txt</a>
+      <a class="button button-secondary" href="/llms.txt">Open llms.txt</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll("[data-mode-button]");
+  const panels = document.querySelectorAll("[data-mode-panel]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const mode = button.getAttribute("data-mode-button");
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+      panels.forEach((panel) => {
+        panel.classList.toggle("is-visible", panel.getAttribute("data-mode-panel") === mode);
+      });
+    });
+  });
+</script>

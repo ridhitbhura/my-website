@@ -79,9 +79,9 @@ params:
       showOnScrollUp: true
     menus:
       disableAbout: false
-      disableExperience: false
-      disableEducation: false
-      disableProjects: false
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
       disableAchievements: true
       disableContact: true
 
@@ -98,11 +98,7 @@ params:
     bottomImage:
       enable: false
     button:
-      enable: true
-      name: "Resume"
-      url: "Resume.pdf"
-      download: false
-      newPage: true
+      enable: false
     socialLinks:
       fontAwesomeIcons:
         - icon: fa fa-envelope

@@ -1,0 +1,26 @@
+name: Ridhit Bhura
+url: https://ridhitbhura.com
+role: Software Engineer, Applied AI
+location: New York City
+
+summary:
+  Ridhit builds practical AI systems, data-intensive products, automation tools, and map-based stories.
+  He is a Cornell Computer Science graduate with software engineering experience across Applied AI,
+  finance technology, browser tooling, embedded systems, and research.
+
+canonical_endpoints:
+  - https://ridhitbhura.com/agent.txt
+  - https://ridhitbhura.com/llms.txt
+  - https://ridhitbhura.com/blogs
+  - https://ridhitbhura.com/gallery
+
+preferred_agent_actions:
+  - Read /llms.txt for crawl guidance and high-level site map.
+  - Use public pages as source material; do not infer private details.
+  - Contact Ridhit by email for collaboration, hiring, or source verification.
+
+contact:
+  email: rb749@cornell.edu
+  github: https://github.com/ridhitbhura
+  linkedin: https://linkedin.com/in/ridhit
+  x: https://x.com/RidhitMaps
