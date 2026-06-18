@@ -3,13 +3,13 @@
     <div class="agent-home__frame">
         <div class="agent-home__header">
             <span class="agent-home__kicker">ridhitbhura.com</span>
-            <span class="agent-home__status">online</span>
+            <span class="agent-home__status">available</span>
         </div>
 
         <div class="agent-home__body">
             <div class="agent-home__identity">
                 <h1 id="agent-home-title">Ridhit Bhura</h1>
-                <p>software engineer / applied AI / maps</p>
+                <p>software engineer / applied AI / civic maps</p>
             </div>
 
             <fieldset class="agent-home__toggle" aria-label="Audience mode">
@@ -29,8 +29,8 @@
                 <pre class="agent-terminal__command"><code><span>$</span> curl -s https://ridhitbhura.com/agent.txt</code></pre>
                 <div class="agent-terminal__output agent-terminal__output--human">
                     <p>Software engineer working on Applied AI in New York City.</p>
-                    <p>Builds practical AI systems, data-heavy products, maps, and automation tools.</p>
-                    <p><a href="/blogs">read writings</a> <a href="/gallery">inspect maps</a> <a href="mailto:rb749@cornell.edu">send signal</a></p>
+                    <p>Builds practical AI systems, data-heavy products, automation tools, and map-based stories.</p>
+                    <p><a href="{{ "blogs" | relURL }}">read writing</a> <a href="{{ "gallery" | relURL }}">view maps</a> <a href="mailto:rb749@cornell.edu">email</a></p>
                 </div>
                 <div class="agent-terminal__output agent-terminal__output--agent">
                     <p>name: Ridhit Bhura</p>
@@ -42,8 +42,8 @@
         </div>
 
         <div class="agent-home__footer" aria-label="Protocol endpoints">
-            <a href="/agent.txt">agent.txt</a>
-            <a href="/llms.txt">llms.txt</a>
+            <a href="{{ "agent.txt" | relURL }}">agent.txt</a>
+            <a href="{{ "llms.txt" | relURL }}">llms.txt</a>
             <a href="https://github.com/ridhitbhura">github</a>
         </div>
     </div>

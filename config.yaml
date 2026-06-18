@@ -79,9 +79,9 @@ params:
       showOnScrollUp: true
     menus:
       disableAbout: false
-      disableExperience: true
-      disableEducation: true
-      disableProjects: true
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
       disableAchievements: true
       disableContact: true
 
