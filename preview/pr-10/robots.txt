@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://ridhitbhura.github.io/my-website/preview/pr-10/sitemap.xml
