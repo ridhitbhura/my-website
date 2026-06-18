@@ -4,7 +4,7 @@
    ============================================= */
 
 :root {
-    --protocol-bg: #f7f3ea;
+    --protocol-bg: #f5f0e8;
     --protocol-ink: #151412;
     --protocol-muted: #68635b;
     --protocol-line: rgba(21, 20, 18, 0.14);
@@ -81,7 +81,15 @@ li > .dropdown-toggle:focus {
     min-height: calc(100svh - 78px);
     display: grid;
     place-items: center;
-    padding: clamp(1.25rem, 3vw, 3rem);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: clamp(1.25rem, 4vw, 4rem);
+    background:
+        linear-gradient(rgba(244, 239, 231, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(244, 239, 231, 0.035) 1px, transparent 1px),
+        #0d0f12;
+    background-size: 42px 42px;
+    color: #f4efe7;
     line-height: 1.4;
     overflow: hidden;
 }
@@ -98,15 +106,14 @@ li > .dropdown-toggle:focus {
 }
 
 .agent-home__frame {
-    width: min(100%, 980px);
-    min-height: min(680px, calc(100svh - 126px));
+    width: min(calc(100% - 32px), 980px);
+    min-height: min(620px, calc(100svh - 126px));
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto 1fr auto;
-    border: 1px solid var(--protocol-line);
-    background: var(--protocol-panel);
-    box-shadow: 0 24px 80px rgba(21, 20, 18, 0.08);
-    backdrop-filter: blur(20px);
+    border: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .agent-home__header,
@@ -122,7 +129,7 @@ li > .dropdown-toggle:focus {
     font-weight: 700;
     letter-spacing: 0;
     text-transform: uppercase;
-    color: var(--protocol-muted);
+    color: rgba(244, 239, 231, 0.56);
 }
 
 .agent-home__body,
@@ -132,20 +139,21 @@ li > .dropdown-toggle:focus {
 }
 
 .agent-home__header {
-    border-bottom: 1px solid var(--protocol-line);
+    border-bottom: 0;
 }
 
 .agent-home__footer {
-    border-top: 1px solid var(--protocol-line);
+    border-top: 0;
+    justify-content: center;
 }
 
 .agent-home__footer a {
-    color: var(--protocol-muted) !important;
+    color: rgba(244, 239, 231, 0.5) !important;
     text-decoration: none;
 }
 
 .agent-home__footer a:hover {
-    color: var(--protocol-ink) !important;
+    color: #f4efe7 !important;
 }
 
 .agent-home__status {
@@ -171,28 +179,31 @@ li > .dropdown-toggle:focus {
     display: grid;
     justify-items: center;
     align-content: center;
-    gap: clamp(0.95rem, 2.2vw, 1.35rem);
-    padding: clamp(1.5rem, 4.5vw, 3.6rem) clamp(1rem, 4vw, 3rem);
+    gap: clamp(1rem, 2.6vw, 1.8rem);
+    padding: clamp(1.25rem, 4vw, 3rem) 0;
     text-align: center;
 }
 
-.agent-home__label {
-    margin: 0;
-    font-family: "Roboto", "Alata", sans-serif;
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0;
-    text-transform: uppercase;
-    color: var(--protocol-coral);
+.agent-home__identity {
+    display: grid;
+    gap: 0.3rem;
 }
 
 #hero.agent-home h1 {
-    max-width: 780px;
     margin: 0;
-    color: var(--protocol-ink) !important;
-    font-family: "Alata", "Roboto", sans-serif;
-    font-size: clamp(2.35rem, 7.4vw, 5rem);
-    line-height: 0.95;
+    font-family: "Roboto", "Alata", sans-serif;
+    font-size: clamp(0.88rem, 1.4vw, 1.08rem);
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #f4efe7 !important;
+}
+
+.agent-home__identity p {
+    margin: 0;
+    color: rgba(244, 239, 231, 0.52);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: clamp(0.72rem, 1.5vw, 0.9rem);
     letter-spacing: 0;
 }
 
@@ -203,8 +214,8 @@ li > .dropdown-toggle:focus {
     gap: 0;
     padding: 0.24rem;
     margin: 0;
-    border: 1px solid var(--protocol-line);
-    background: color-mix(in srgb, var(--protocol-bg) 78%, transparent);
+    border: 1px solid rgba(244, 239, 231, 0.18);
+    background: rgba(244, 239, 231, 0.05);
 }
 
 .agent-home__toggle legend {
@@ -232,7 +243,7 @@ li > .dropdown-toggle:focus {
     min-height: 2.28rem;
     margin: 0;
     padding: 0.35rem 1.2rem;
-    color: var(--protocol-muted);
+    color: rgba(244, 239, 231, 0.58);
     cursor: pointer;
     font-family: "Roboto", "Alata", sans-serif;
     font-size: 0.75rem;
@@ -249,17 +260,17 @@ li > .dropdown-toggle:focus {
 
 #mode-human:checked + label,
 #mode-agent:checked + label {
-    background: var(--protocol-ink);
-    color: var(--protocol-bg);
+    background: #f4efe7;
+    color: #0d0f12;
 }
 
 .agent-terminal {
-    width: min(100%, 760px);
-    border: 1px solid var(--protocol-line);
-    background: #101214;
+    width: min(100%, 860px);
+    border: 1px solid rgba(244, 239, 231, 0.16);
+    background: rgba(6, 8, 10, 0.92);
     color: #ece7dc;
     text-align: left;
-    box-shadow: 0 18px 48px rgba(21, 20, 18, 0.18);
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.38);
 }
 
 .agent-terminal__chrome {
@@ -288,13 +299,13 @@ li > .dropdown-toggle:focus {
 .agent-terminal__output {
     margin: 0;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    font-size: clamp(0.78rem, 2.2vw, 0.96rem);
+    font-size: clamp(0.86rem, 2.4vw, 1.12rem);
     line-height: 1.55;
     letter-spacing: 0;
 }
 
 .agent-terminal__command {
-    padding: 1rem clamp(1rem, 3vw, 1.35rem) 0.65rem;
+    padding: clamp(1rem, 2vw, 1.35rem) clamp(1rem, 3vw, 1.6rem) 0.75rem;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
@@ -305,7 +316,7 @@ li > .dropdown-toggle:focus {
 
 .agent-terminal__output {
     display: none;
-    padding: 0 1.35rem 1.15rem;
+    padding: 0 clamp(1rem, 3vw, 1.6rem) clamp(1rem, 2vw, 1.35rem);
     color: rgba(236, 231, 220, 0.78);
     overflow-wrap: anywhere;
 }
@@ -339,7 +350,7 @@ li > .dropdown-toggle:focus {
 
     #hero.agent-home {
         min-height: calc(100svh - 66px);
-        padding: 0.85rem;
+        padding: 0.85rem 0;
     }
 
     .agent-home__frame {
@@ -360,10 +371,6 @@ li > .dropdown-toggle:focus {
 
     .agent-home__body {
         padding: 1.15rem 0.85rem;
-    }
-
-    #hero.agent-home h1 {
-        font-size: clamp(2.1rem, 10.8vw, 2.85rem);
     }
 
     .agent-home__toggle {
