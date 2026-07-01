@@ -11,7 +11,7 @@ export const profile = {
   name: "Ridhit Bhura",
   role: "Applied AI / Software Engineer",
   headline: "Software engineer building applied AI systems.",
-  subline: "SWE II at GEICO. Cornell CS. NYC.",
+  subline: "Mostly I build practical AI workflows at GEICO. Sometimes I make maps of elections and political geography.",
   blurb:
     "I build practical AI workflows, backend systems, and data-rich tools. Maps and political geography are my public creative thread.",
   email: "mailto:rb749@cornell.edu",

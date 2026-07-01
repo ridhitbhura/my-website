@@ -1,47 +1,53 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectRow from "../components/ProjectRow.astro";
-import SectionHeading from "../components/SectionHeading.astro";
-import { getCollection } from "astro:content";
-import { byDateDesc, profile, socialLinks } from "../data/site";
+import { profile, socialLinks } from "../data/site";
 
-const entries = (await getCollection("entries", ({ data }) => !data.draft)).sort(byDateDesc);
-const featuredEntries = entries.filter((entry) => entry.data.featured).slice(0, 4);
+const primaryLink = socialLinks.find((link) => link.label === "Resume");
+const quietLinks = socialLinks.filter((link) => link.label !== "Resume");
 ---
 
 <BaseLayout
   title={profile.name}
   description="Ridhit Bhura is an applied AI/software engineer in NYC building practical AI workflows, backend systems, and data-rich tools."
 >
-  <section class="shell flex min-h-[calc(100svh-140px)] flex-col justify-center py-16">
+  <section class="shell py-24 md:py-32">
     <div class="max-w-4xl">
       <h1 class="text-5xl font-semibold leading-[0.98] tracking-normal text-neutral-950 md:text-7xl">
         {profile.headline}
       </h1>
-      <p class="mt-6 max-w-xl text-lg leading-8 text-neutral-600">{profile.subline}</p>
-      <div class="mt-8 flex flex-wrap gap-3">
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">{profile.subline}</p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
         {
-          socialLinks.map((link) => (
+          primaryLink && (
+            <a
+              href={primaryLink.href}
+              class="focus-ring rounded-full border border-neutral-950 bg-neutral-950 px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-neutral-950"
+            >
+              {primaryLink.label}
+            </a>
+          )
+        }
+        {
+          quietLinks.map((link) => (
             <a
               href={link.href}
-              class="focus-ring rounded-full border border-neutral-950 bg-neutral-950 px-4 py-2 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-neutral-950"
+              class="focus-ring text-sm font-medium text-neutral-600 underline decoration-transparent underline-offset-4 transition hover:text-neutral-950 hover:decoration-neutral-400"
             >
               {link.label}
             </a>
           ))
         }
       </div>
-    </div>
-  </section>
 
-  <section class="shell py-16" id="work">
-    <SectionHeading
-      eyebrow="Selected work"
-      title="Small set of projects that prove the range."
-      copy="AI workflows, ML research, embedded systems, and data storytelling."
-    />
-    <div class="soft-card rounded-lg px-5 md:px-7">
-      {featuredEntries.map((entry) => <ProjectRow entry={entry} featured />)}
+      <p class="mt-12">
+        <a
+          href="/work/"
+          class="focus-ring text-sm font-semibold text-neutral-950 underline decoration-[var(--accent)] decoration-2 underline-offset-4 transition hover:decoration-neutral-950"
+        >
+          Selected work &rarr;
+        </a>
+      </p>
     </div>
   </section>
 </BaseLayout>
