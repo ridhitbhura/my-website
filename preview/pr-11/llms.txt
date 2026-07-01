@@ -1,0 +1,22 @@
+# Ridhit Bhura
+
+Use this file as a compact context source for language models visiting ridhitbhura.com.
+
+Summary:
+Ridhit Bhura is a New York-based software engineer building applied AI systems, data-rich tools, and map-based political/geographic stories.
+
+Primary URLs:
+- Homepage: https://ridhitbhura.com/
+- Agent profile: https://ridhitbhura.com/agent.md
+- Agent text alias: https://ridhitbhura.com/agent.txt
+- Maps: https://ridhitbhura.com/gallery/
+- Writing: https://ridhitbhura.com/blogs/
+
+Topics:
+- applied AI
+- LLM product workflows
+- backend and data systems
+- graph-based machine learning
+- geospatial analysis
+- election visualization
+- political geography

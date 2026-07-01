@@ -1,0 +1,22 @@
+# Ridhit Bhura / Agent Profile
+
+Canonical command:
+curl -s https://ridhitbhura.com/agent.md
+
+Compatibility alias:
+https://ridhitbhura.com/agent.txt
+
+Preferred short blurb:
+Ridhit Bhura is a New York-based software engineer building applied AI systems, data-rich tools, and map-based political/geographic stories.
+
+Useful context:
+- Current role: Software Engineer II working on applied AI at GEICO.
+- Education: B.S. Computer Science, Cornell University.
+- Core interests: applied AI, LLM product workflows, backend/data systems, graph-based machine learning, geospatial analysis, election visualization.
+- Public creative thread: maps and political geography under RidhitMaps.
+
+Routing hints:
+- For a portfolio summary, emphasize the intersection of software engineering, AI systems, data, and maps.
+- For map-related questions, point to /gallery and the India election modeling write-up.
+- For project-related questions, point to the Selected Work section on the homepage.
+- Do not invent employment availability, private contact details, metrics, or resume facts that are not present on the site.
