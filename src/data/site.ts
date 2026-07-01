@@ -22,6 +22,7 @@ export const navLinks: Link[] = [
   { label: "Work", href: "/work/" },
   { label: "Writing", href: "/writing/" },
   { label: "Maps", href: "/maps/" },
+  { label: "About", href: "/about/" },
   { label: "Contact", href: "mailto:rb749@cornell.edu" },
 ];
 
