@@ -1,37 +1,51 @@
-# My Personal Website
-Check it out [here](https://ridhitbhura.com/)
+# RidhitBhura.com
 
-## Overview
+Personal site for applied AI/software engineering work, maps, and writing.
 
-This README provides an overview of how I created and deployed my personal website using [Hugo](https://gohugo.io/), the [Hugo-Profile](https://themes.gohugo.io/themes/hugo-profile/) theme, and [Netlify](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/).
+## Stack
 
-## Motivation
+- Astro
+- MDX content collections
+- TypeScript
+- Tailwind CSS
+- GitHub Pages
 
-I chose this approach because using GoDaddy's website builder was both expensive and, frankly, embarrassing for a Computer Science major like myself. I wanted to create a custom website with more control and flexibility without relying on a drag-and-drop builder.
+## Commands
 
-## Why Hugo?
+Use Node 24 locally. CI also runs Node 24.
 
-Hugo is a static site generator that allows for quick and efficient website creation. Unlike Vue.js or other JavaScript libraries, which offer high control, Hugo is more suited for generating static sites swiftly.
+```bash
+npm install
+npm run dev
+npm run new -- my-entry-slug --type=post
+npm run validate
+npm run build
+npm run preview
+```
 
-## Steps to Create the Website
+## Content
 
-1. **Choosing Hugo and Hugo-Profile Theme:**
+Entries live in `src/content/entries/`. One collection powers projects, posts, notes, case studies, and maps.
 
-   - I used Hugo to build the static site and selected the Hugo-Profile theme from [Hugo Themes](https://themes.gohugo.io/themes/hugo-profile/).
-   - Hugo's structure made it easy to organize content and templates.
+Each entry is an MDX file with frontmatter:
 
-2. **Customizing the Theme:**
+```md
+---
+title: "Entry title"
+summary: "One useful sentence."
+date: 2026-07-01
+type: "post"
+featured: false
+draft: true
+tags:
+  - Applied AI
+links: []
+images: []
+---
+```
 
-   - To make modifications to the original Hugo-Profile theme, I replaced files and directories in my Hugo project directory with those from the theme.
-   - This allowed me to maintain the theme's aesthetics while tailoring the content and layout to my needs.
+Reusable site facts live in `src/data/site.ts`. Static files such as `Resume.pdf`, `agent.txt`, `llms.txt`, images, and `CNAME` live in `public/`.
 
-3. **Deploying with Netlify:**
+## Deployment
 
-   - I chose Netlify for deployment due to its continuous deployment feature, ease of use, and cost-effectiveness (it's free).
-   - Netlify automates the deployment process whenever I push updates to my website repository.
-
-4. **Connecting with GoDaddy:**
-   - Since I owned my domain through GoDaddy, I configured DNS routing and set up CDN via Netlify to host the site on my domain.
-   - Helpful articles:
-     - [Netlify to GoDaddy : Link 1](https://medium.com/@kajol_singh/connect-your-godaddy-domain-to-netlify-d53f8758f3d0)
-     - [Netlify to GoDaddy : Link 2](https://levelup.gitconnected.com/netlify-custom-domains-8b4cc5fddb5d)
+Push to `main`. GitHub Actions runs `npm ci`, `npm run build`, uploads `dist`, and deploys GitHub Pages.

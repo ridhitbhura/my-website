@@ -1,0 +1,41 @@
+---
+import { entryPrimaryHref, type SiteEntry } from "../data/site";
+
+type Props = {
+  entry: SiteEntry;
+  featured?: boolean;
+};
+
+const { entry, featured = false } = Astro.props;
+const href = entryPrimaryHref(entry);
+const isExternal = href.startsWith("http");
+---
+
+<a
+  href={href}
+  target={isExternal ? "_blank" : undefined}
+  rel={isExternal ? "noreferrer" : undefined}
+  class:list={[
+    "lift group grid gap-5 border-t border-[var(--line)] py-6 focus-ring md:grid-cols-[1.1fr_1.4fr_0.6fr]",
+    featured ? "first:border-t-0" : "",
+  ]}
+>
+  <div class="flex min-w-0 flex-col gap-2">
+    <span class="fine-label text-neutral-500">{entry.data.eyebrow ?? entry.data.type}</span>
+    <h3 class="text-xl font-semibold text-neutral-950">{entry.data.title}</h3>
+  </div>
+  <div class="min-w-0">
+    <p class="text-sm leading-6 text-neutral-700">{entry.data.summary}</p>
+    {entry.data.proof && <p class="mt-2 text-sm leading-6 text-neutral-500">{entry.data.proof}</p>}
+    {isExternal && <p class="mt-2 text-xs font-semibold text-[var(--accent)]">External project</p>}
+  </div>
+  <div class="flex flex-wrap content-start gap-2 md:justify-end">
+    {
+      entry.data.tags.map((tag) => (
+        <span class="rounded-full border border-[var(--line)] bg-white px-2.5 py-1 text-xs font-medium text-neutral-600">
+          {tag}
+        </span>
+      ))
+    }
+  </div>
+</a>

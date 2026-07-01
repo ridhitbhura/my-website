@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+import { getCollection } from "astro:content";
+import { byDateDesc, entryHref, isMapEntry } from "../../data/site";
+
+const entries = (await getCollection("entries", ({ data }) => !data.draft))
+  .filter(isMapEntry)
+  .sort(byDateDesc);
+const images = entries.flatMap((entry) =>
+  entry.data.images.map((image) => ({
+    ...image,
+    href: entryHref(entry),
+    title: entry.data.title,
+  })),
+);
+---
+
+<BaseLayout title="Maps" description="Map repository by Ridhit Bhura.">
+  <section class="shell py-16 md:py-24">
+    <SectionHeading
+      eyebrow="Maps"
+      title="Political geography, kept visual."
+      copy="A quick gallery of map work. This stays secondary to the applied-AI hiring path, but it is part of the signal."
+    />
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        images.map((image) => (
+          <a class="lift focus-ring overflow-hidden rounded-lg border border-[var(--line)] bg-white" href={image.href}>
+            <img
+              src={image.src}
+              alt={image.alt}
+              class="aspect-[4/3] w-full object-cover"
+              loading="lazy"
+            />
+            <span class="sr-only">{image.title}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

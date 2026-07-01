@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectRow from "../components/ProjectRow.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { getCollection } from "astro:content";
+import {
+  byDateDesc,
+  entryHref,
+  experience,
+  isMapEntry,
+  isWritingEntry,
+  profile,
+  proofPoints,
+  socialLinks,
+} from "../data/site";
+
+const entries = (await getCollection("entries", ({ data }) => !data.draft)).sort(byDateDesc);
+const featuredEntries = entries.filter((entry) => entry.data.featured).slice(0, 4);
+const latestWriting = entries.find((entry) => isWritingEntry(entry) && entry.data.featured) ?? entries.find(isWritingEntry);
+const mapEntry = entries.find(isMapEntry);
+---
+
+<BaseLayout
+  title={profile.name}
+  description="Ridhit Bhura is an applied AI/software engineer in NYC building practical AI workflows, backend systems, and data-rich tools."
+>
+  <section class="shell min-h-[calc(100svh-84px)] py-16 md:py-24">
+    <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+      <div class="max-w-4xl">
+        <p class="fine-label mb-5 text-[var(--accent)]">{profile.role}</p>
+        <h1 class="text-5xl font-semibold leading-[0.98] tracking-normal text-neutral-950 md:text-7xl">
+          {profile.headline}
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-8 text-neutral-600">{profile.subline}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          {
+            socialLinks.map((link) => (
+              <a
+                href={link.href}
+                class="focus-ring rounded-full border border-neutral-950 bg-neutral-950 px-4 py-2 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-neutral-950"
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <aside class="soft-card rounded-lg p-5">
+        <div class="mb-4 flex items-center justify-between border-b border-[var(--line)] pb-3">
+          <span class="fine-label text-neutral-500">Signal</span>
+          <span class="h-2 w-2 rounded-full bg-[var(--accent)]"></span>
+        </div>
+        <p class="text-sm leading-6 text-neutral-700">{profile.blurb}</p>
+        <div class="mt-5 grid gap-2">
+          {
+            proofPoints.map((point) => (
+              <div class="flex items-center justify-between gap-3 rounded-md border border-[var(--line)] bg-white px-3 py-2 text-sm">
+                <span>{point}</span>
+                <span class="text-[var(--accent)]">/</span>
+              </div>
+            ))
+          }
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="shell py-12" id="work">
+    <SectionHeading
+      eyebrow="Selected work"
+      title="Small set of projects that prove the range."
+      copy="AI workflows, ML research, embedded systems, and data storytelling."
+    />
+    <div class="soft-card rounded-lg px-5 md:px-7">
+      {featuredEntries.map((entry) => <ProjectRow entry={entry} featured />)}
+    </div>
+  </section>
+
+  <section class="shell grid gap-8 py-12 lg:grid-cols-[0.8fr_1.2fr]">
+    <div>
+      <SectionHeading eyebrow="Experience" title="Short version." />
+    </div>
+    <div class="soft-card rounded-lg p-5">
+      {
+        experience.map((item) => (
+          <div class="grid gap-2 border-t border-[var(--line)] py-4 first:border-t-0 first:pt-0 last:pb-0 sm:grid-cols-[1fr_auto]">
+            <div>
+              <h3 class="font-semibold text-neutral-950">{item.role}</h3>
+              <p class="text-sm text-neutral-600">{item.company}</p>
+            </div>
+            <div class="text-left text-sm text-neutral-500 sm:text-right">
+              <p>{item.when}</p>
+              <p>{item.location}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="shell grid gap-5 py-12 md:grid-cols-2">
+    <a class="lift soft-card focus-ring rounded-lg p-6" href={latestWriting ? entryHref(latestWriting) : "/writing/"}>
+      <p class="fine-label text-[var(--accent)]">Writing</p>
+      <h2 class="mt-3 text-2xl font-semibold">{latestWriting?.data.title ?? "Notes, essays, and case studies."}</h2>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        {latestWriting?.data.summary ?? "Longer analysis lives here, away from the job-facing homepage."}
+      </p>
+    </a>
+    <a class="lift soft-card focus-ring rounded-lg p-6" href={mapEntry ? entryHref(mapEntry) : "/maps/"}>
+      <p class="fine-label text-[var(--accent)]">Maps</p>
+      <h2 class="mt-3 text-2xl font-semibold">{mapEntry?.data.title ?? "Political geography as visual thinking."}</h2>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">
+        {mapEntry?.data.summary ?? "A repository of map work that shows data instincts beyond standard software projects."}
+      </p>
+    </a>
+  </section>
+</BaseLayout>

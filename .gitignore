@@ -1,1 +1,7 @@
 .claude
+.astro/
+dist/
+preview/
+node_modules/
+npm-debug.log*
+.DS_Store
