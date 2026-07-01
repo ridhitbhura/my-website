@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectRow from "../../components/ProjectRow.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+import { getCollection } from "astro:content";
+import { byDateDesc, isWorkEntry } from "../../data/site";
+
+const entries = (await getCollection("entries", ({ data }) => !data.draft))
+  .filter(isWorkEntry)
+  .sort(byDateDesc);
+---
+
+<BaseLayout title="Work" description="Selected applied AI, software, ML, embedded, and data visualization work by Ridhit Bhura.">
+  <section class="shell py-16 md:py-24">
+    <SectionHeading
+      eyebrow="Work"
+      title="Outcome-first, no filler."
+      copy="Each project is here because it shows a useful hiring signal."
+    />
+    <div class="soft-card rounded-lg px-5 md:px-7">
+      {entries.map((entry) => <ProjectRow entry={entry} featured />)}
+    </div>
+  </section>
+</BaseLayout>

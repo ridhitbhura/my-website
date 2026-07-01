@@ -1,0 +1,71 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatEntryDate } from "../../data/site";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("entries", ({ data }) => !data.draft);
+
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+type Props = {
+  entry: CollectionEntry<"entries">;
+};
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.summary}>
+  <article class="shell py-16 md:py-24">
+    <div class="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+      <aside class="lg:sticky lg:top-28">
+        <p class="fine-label text-[var(--accent)]">{entry.data.eyebrow ?? entry.data.type}</p>
+        <h1 class="mt-4 text-4xl font-semibold leading-tight text-neutral-950 md:text-6xl">
+          {entry.data.title}
+        </h1>
+        <p class="mt-5 text-lg leading-8 text-neutral-600">{entry.data.summary}</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          {entry.data.tags.map((tag) => <span class="rounded-full border border-[var(--line)] bg-white px-2.5 py-1 text-xs">{tag}</span>)}
+        </div>
+        <div class="mt-8 grid gap-3 text-sm text-neutral-600">
+          <p>{formatEntryDate(entry.data.date)}</p>
+          {
+            entry.data.links.map((link) => (
+              <a class="focus-ring w-fit rounded-full border border-neutral-950 bg-neutral-950 px-4 py-2 font-semibold text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-neutral-950" href={link.href}>
+                {link.label}
+              </a>
+            ))
+          }
+        </div>
+      </aside>
+
+      <div class="soft-card rounded-lg p-6 md:p-8">
+        {entry.data.image && (
+          <figure class="mb-8 overflow-hidden rounded-lg border border-[var(--line)] bg-white">
+            <img src={entry.data.image} alt="" class="w-full" loading="eager" />
+          </figure>
+        )}
+        <div class="prose-entry">
+          <Content />
+        </div>
+        {
+          entry.data.images.length > 1 && (
+            <div class="mt-10 grid gap-3 sm:grid-cols-2">
+              {entry.data.images.map((image) => (
+                <figure class="overflow-hidden rounded-lg border border-[var(--line)] bg-white">
+                  <img src={image.src} alt={image.alt} class="aspect-[4/3] w-full object-cover" loading="lazy" />
+                  {image.caption && <figcaption class="border-t border-[var(--line)] px-4 py-3 text-xs text-neutral-500">{image.caption}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </article>
+</BaseLayout>

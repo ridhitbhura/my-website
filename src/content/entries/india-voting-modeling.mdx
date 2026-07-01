@@ -1,0 +1,28 @@
+---
+title: "How India (would have) voted?"
+summary: "District-level election modeling and geospatial analysis of demographic signals."
+date: 2021-08-01
+type: "case-study"
+featured: true
+eyebrow: "Data + maps"
+proof: "Shows data cleaning, modeling, visual storytelling, and geographic reasoning."
+tags:
+  - Maps
+  - Data
+  - Elections
+  - ML
+image: "https://iili.io/Jp804WP.md.png"
+links:
+  - label: "GitHub"
+    href: "https://github.com/ridhitbhura/Election_Modelling_India"
+images:
+  - src: "https://iili.io/Jp804WP.md.png"
+    alt: "Map of model residuals across India"
+    caption: "Alliance over-performance and under-performance by district."
+---
+
+This project joins census-style demographic signals with district-level election results. The original analysis compared predicted alliance behavior with actual 2019 results, then mapped where alliances over- or under-performed relative to demographics.
+
+The interesting part is not just the model score. It is the geography: where patterns cluster, where third parties distort a two-alliance view, and where demographic signals fail to explain local political behavior.
+
+The model was a compact k-nearest-neighbors approach over demographic fields. The output became more useful once it was visual: predicted alliance behavior, spatial residuals, and the local exceptions that make the story less tidy.

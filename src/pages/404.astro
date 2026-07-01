@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Not found" description="Page not found.">
+  <section class="shell py-24">
+    <p class="fine-label text-[var(--accent)]">404</p>
+    <h1 class="mt-4 text-5xl font-semibold">Page moved or never existed.</h1>
+    <p class="mt-5 max-w-xl text-neutral-600">
+      The new site is intentionally smaller. Start with work, writing, or maps.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a class="focus-ring rounded-full border border-neutral-950 bg-neutral-950 px-4 py-2 text-sm font-semibold text-white" href="/work/">Work</a>
+      <a class="focus-ring rounded-full border border-[var(--line)] bg-white px-4 py-2 text-sm font-semibold" href="/writing/">Writing</a>
+      <a class="focus-ring rounded-full border border-[var(--line)] bg-white px-4 py-2 text-sm font-semibold" href="/maps/">Maps</a>
+    </div>
+  </section>
+</BaseLayout>
