@@ -49,3 +49,5 @@ Reusable site facts live in `src/data/site.ts`. Static files such as `Resume.pdf
 ## Deployment
 
 Push to `main`. GitHub Actions runs `npm ci`, `npm run build`, uploads `dist`, and deploys GitHub Pages.
+
+Cloudflare Pages preview deployments should be used as staging before merging. See `docs/deployment.md`.
