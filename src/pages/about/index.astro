@@ -7,23 +7,22 @@ import { experience, profile, proofPoints, socialLinks } from "../../data/site";
 <BaseLayout title="About" description={profile.blurb}>
   <section class="shell py-16 md:py-24">
     <p class="fine-label mb-5 text-[var(--accent)]">About</p>
-    <h1 class="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-normal text-neutral-950 md:text-6xl">
-      {profile.headline}
-    </h1>
+    <h1 class="max-w-3xl text-4xl leading-[1.05] text-neutral-950 md:text-6xl">Hi, I&rsquo;m Ridhit.</h1>
     <p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">{profile.blurb}</p>
-    <ul class="mt-6 flex max-w-2xl flex-wrap gap-2 text-sm text-neutral-600">
-      {
-        proofPoints.map((point) => (
-          <li class="rounded-full border border-[var(--line)] bg-white px-3 py-1">{point}</li>
-        ))
-      }
-    </ul>
-    <div class="mt-8 flex flex-wrap gap-3">
+    <p class="mt-5 max-w-2xl text-sm leading-6 text-neutral-500">{proofPoints.join("  ·  ")}</p>
+
+    <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+      <a
+        href={profile.email}
+        class="focus-ring rounded-full border border-neutral-950 bg-neutral-950 px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-neutral-950"
+      >
+        Get in touch
+      </a>
       {
         socialLinks.map((link) => (
           <a
             href={link.href}
-            class="focus-ring rounded-full border border-neutral-950 bg-neutral-950 px-4 py-2 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-neutral-950"
+            class="focus-ring text-sm font-medium text-neutral-600 underline decoration-transparent underline-offset-4 transition hover:text-neutral-950 hover:decoration-neutral-400"
           >
             {link.label}
           </a>
@@ -34,15 +33,15 @@ import { experience, profile, proofPoints, socialLinks } from "../../data/site";
 
   <section class="shell py-16">
     <SectionHeading eyebrow="Experience" title="Where I've worked and studied." />
-    <div class="soft-card rounded-lg p-5">
+    <div class="mt-2">
       {
         experience.map((item) => (
-          <div class="grid gap-2 border-t border-[var(--line)] py-4 first:border-t-0 first:pt-0 last:pb-0 sm:grid-cols-[1fr_auto]">
+          <div class="grid gap-2 border-t border-[var(--line)] py-5 first:border-t-0 first:pt-0 sm:grid-cols-[1fr_auto]">
             <div>
-              <h3 class="font-semibold text-neutral-950">{item.role}</h3>
+              <h3 class="font-medium text-neutral-950">{item.role}</h3>
               <p class="text-sm text-neutral-600">{item.company}</p>
             </div>
-            <div class="text-left text-sm text-neutral-600 sm:text-right">
+            <div class="text-left text-sm text-neutral-500 sm:text-right">
               <p>{item.when}</p>
               <p>{item.location}</p>
             </div>
