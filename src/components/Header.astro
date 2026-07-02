@@ -2,21 +2,28 @@
 import { navLinks, profile } from "../data/site";
 ---
 
-<header class="shell sticky top-0 z-20 pt-4">
+<header
+  class="sticky top-0 z-20 border-b border-[var(--line)] backdrop-blur"
+  style="background: rgba(250, 249, 246, 0.8)"
+>
   <nav
-    class="soft-card flex items-center justify-between gap-4 rounded-full px-4 py-3 backdrop-blur"
+    class="shell flex flex-wrap items-center gap-x-4 gap-y-2 py-5 sm:justify-between"
     aria-label="Primary navigation"
   >
-    <a class="focus-ring rounded-full text-sm font-semibold" href="/" aria-label="Ridhit Bhura home">
+    <a
+      class="focus-ring shrink-0 whitespace-nowrap text-base font-medium tracking-tight text-neutral-950"
+      style="font-family: var(--font-display)"
+      href="/"
+      aria-label="Ridhit Bhura home"
+    >
       {profile.name}
     </a>
-    <div class="flex items-center gap-1 text-sm text-neutral-600">
+    <div
+      class="flex w-full flex-wrap items-center gap-x-5 gap-y-1 text-sm tracking-wide text-neutral-600 sm:w-auto"
+    >
       {
         navLinks.map((link) => (
-          <a
-            class="focus-ring rounded-full px-3 py-1.5 transition hover:bg-neutral-950 hover:text-white"
-            href={link.href}
-          >
+          <a class="focus-ring transition-colors hover:text-neutral-950" href={link.href}>
             {link.label}
           </a>
         ))
