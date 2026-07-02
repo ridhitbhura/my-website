@@ -2,9 +2,6 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionHeading from "../../components/SectionHeading.astro";
 import { experience, profile, proofPoints, socialLinks } from "../../data/site";
-
-const primaryLink = socialLinks.find((link) => link.label === "Resume");
-const quietLinks = socialLinks.filter((link) => link.label !== "Resume");
 ---
 
 <BaseLayout title="About" description={profile.blurb}>
@@ -15,18 +12,14 @@ const quietLinks = socialLinks.filter((link) => link.label !== "Resume");
     <p class="mt-5 max-w-2xl text-sm leading-6 text-neutral-500">{proofPoints.join("  ·  ")}</p>
 
     <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+      <a
+        href={profile.email}
+        class="focus-ring rounded-full border border-neutral-950 bg-neutral-950 px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-neutral-950"
+      >
+        Get in touch
+      </a>
       {
-        primaryLink && (
-          <a
-            href={primaryLink.href}
-            class="focus-ring rounded-full border border-neutral-950 bg-neutral-950 px-5 py-2 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-neutral-950"
-          >
-            {primaryLink.label}
-          </a>
-        )
-      }
-      {
-        quietLinks.map((link) => (
+        socialLinks.map((link) => (
           <a
             href={link.href}
             class="focus-ring text-sm font-medium text-neutral-600 underline decoration-transparent underline-offset-4 transition hover:text-neutral-950 hover:decoration-neutral-400"

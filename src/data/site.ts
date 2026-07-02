@@ -30,7 +30,6 @@ export const socialLinks: Link[] = [
   { label: "GitHub", href: "https://github.com/ridhitbhura" },
   { label: "LinkedIn", href: "https://linkedin.com/in/ridhit" },
   { label: "X / Maps", href: "https://x.com/RidhitMaps" },
-  { label: "Resume", href: "/Resume.pdf" },
 ];
 
 export const proofPoints = [
